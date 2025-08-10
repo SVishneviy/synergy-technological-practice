@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Дни до Нового года</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="application" aria-labelledby="title">
+      <h1 id="title" class="title">Сколько дней до Нового года?</h1>
+      <p class="muted">Введите дату в формате <strong>дд.мм.гггг</strong> (например, 15.11.2025) и нажмите «Рассчитать».</p>
+
+      <div class="row">
+        <input id="dateInput" type="text" inputmode="numeric" autocomplete="off"
+               placeholder="дд.мм.гггг" aria-label="Дата в формате дд.мм.гггг" />
+        <button id="calcBtn" type="button">Рассчитать</button>
+      </div>
+
+      <div id="error" class="error" style="display:none" role="alert" aria-live="polite"></div>
+
+      <div class="grid" aria-live="polite">
+        <div class="panel">
+          <div class="label">Дни до 31.12.гггг</div>
+          <div id="daysOut" class="value">—</div>
+        </div>
+        <div class="panel">
+          <div class="label">Год</div>
+          <div id="leapOut" class="value">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="app.js"></script>
+</body>
+</html>
